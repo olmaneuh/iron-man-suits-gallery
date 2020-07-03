@@ -1,21 +1,34 @@
 from flask import Flask, render_template, request
 from flask_uploads import UploadSet, IMAGES, configure_uploads
-
-img = UploadSet("img", IMAGES)
+from PilLite import Image
 
 app = Flask(__name__)
 app.config["UPLOADED_IMG_DEST"] = "uploads/img"
+app.config["UPLOADED_THUMB_DEST"] = "uploads/thumbs"
 
+img = UploadSet("img", IMAGES)
 configure_uploads(app, img)
+
+THUMBS_SIZE = (300, 300)
 
 
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST" and "image" in request.files:
-        img.save(request.files["image"])
+        uploaded_img = request.files["image"]
+
+        img.save(uploaded_img)
+        create_thumb(uploaded_img.filename)
+
         return "Suit uploaded"
 
     return render_template("index.html")
+
+
+def create_thumb(filename):
+    uploaded_img_thumb = Image.open("/".join((app.config["UPLOADED_IMG_DEST"], filename)))
+    uploaded_img_thumb.thumbnail(THUMBS_SIZE)
+    uploaded_img_thumb.save("/".join((app.config["UPLOADED_THUMB_DEST"], filename)))
 
 
 if __name__ == "__main__":
