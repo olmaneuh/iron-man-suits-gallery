@@ -18,6 +18,20 @@
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
     </div>
-
+    
 </div>
+{% endblock %}
+
+{% block gallery %}
+    {% if images %}
+        <div class="row justify-content-center">
+            {% for image in images  %}
+                <div class="col-md-4 col-sm-6">
+                    <a href="{{ url_for('static', filename='uploads/img/'+image) }}" data-toggle="lightbox" data-gallery="suits-gallery">
+                        <img class="w-100 img-fluid" src="{{ url_for('static', filename='uploads/thumbs/'+image) }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
 {% endblock %}

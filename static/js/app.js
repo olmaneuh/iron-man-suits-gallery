@@ -4,4 +4,10 @@ $(document).ready(function() {
         var fileName = $(this)[0].files[0].name;
         $(this).next('.custom-file-label').html(fileName);
     });
+
+    // display gallery image
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
 });
