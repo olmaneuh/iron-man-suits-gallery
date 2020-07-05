@@ -10,7 +10,7 @@ app.config["UPLOADED_THUMB_DEST"] = "static/uploads/thumbs"
 img = UploadSet("img", IMAGES)
 configure_uploads(app, img)
 
-THUMBS_SIZE = (300, 300)
+THUMBS_SIZE = (195, 368)
 
 
 @app.route("/", methods=["GET", "POST"])

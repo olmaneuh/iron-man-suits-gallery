@@ -1,24 +1,22 @@
 {% extends "base.html" %}
 
 {% block form %}
-<div class="row">
+<div class="row mt-5 mb-5">
 
-    <h1 class="title col-md-12 text-center">
-        <span class="iron-man-title">Iron man</span> Suits Gallery
+    <h1 class="col-md-12 text-center">
+        <img src="{{ url_for('static', filename='img/stark-industries-logo.png') }}" alt="stark-industries">
     </h1>
 
-    <div class="col-md-12">
-        <form method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" name="image" id="image">
-                    <label class="custom-file-label" for="image">Select an image...</label>
-                </div>
+    <form method="POST" enctype="multipart/form-data" class="form-inline justify-content-center w-100">
+        <div class="form-group col-md-8 col-sm-6 mx-sm-3">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" name="image" id="image">
+                <label class="custom-file-label" for="image">Select an image...</label>
             </div>
-            <button type="submit" class="btn btn-primary">Save</button>
-        </form>
-    </div>
-    
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+
 </div>
 {% endblock %}
 
@@ -26,7 +24,7 @@
     {% if images %}
         <div class="row justify-content-center">
             {% for image in images  %}
-                <div class="col-md-4 col-sm-6">
+                <div class="suit col-md-2 col-sm-4 p-2 m-2">
                     <a href="{{ url_for('static', filename='uploads/img/'+image) }}" data-toggle="lightbox" data-gallery="suits-gallery">
                         <img class="w-100 img-fluid" src="{{ url_for('static', filename='uploads/thumbs/'+image) }}">
                     </a>

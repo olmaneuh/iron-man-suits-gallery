@@ -1,0 +1,15 @@
+.btn.btn-primary,
+.btn.btn-primary:visited,
+.btn.btn-primary:focus,
+.btn.btn-primary:hover,
+.btn.btn-primary:active {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    color: #495057;
+}
+
+.suit {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    color: #495057;
+}
