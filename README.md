@@ -1,4 +1,4 @@
-# IRON MAN SUITS GALLERY
+# Iron Man Suits Gallery
 A simple [Flask](https://flask.palletsprojects.com/en/1.1.x/) project that shows how to upload images, create a thumbnail, read files in a project directory, 
 and display a gallery.
 
