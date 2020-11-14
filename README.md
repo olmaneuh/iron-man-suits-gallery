@@ -1,4 +1,8 @@
-# Iron Man Suits Gallery
+# Iron Man Suits Gallery 
+
+[![GitHub issues](https://img.shields.io/github/issues/olmaneuh/iron-man-suits-gallery)](https://github.com/olmaneuh/iron-man-suits-gallery/issues)
+[![GitHub license](https://img.shields.io/github/license/olmaneuh/iron-man-suits-gallery)](https://github.com/olmaneuh/iron-man-suits-gallery/blob/master/LICENSE)
+
 A simple [Flask](https://flask.palletsprojects.com/en/1.1.x/) project that shows how to upload images, create a thumbnail, read files in a project directory, 
 and display a gallery.
 
