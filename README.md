@@ -36,13 +36,9 @@ _For more information about how to install Python 3  and Virtual Environments ch
 
 
 ## Author
-**Olman Ureña** is a lifelong student, highly motivated and passionate about AI/ML, new tech advances, build and assemble things, triathlon, music, and food.
-
-* [LinkedIn](https://www.linkedin.com/in/olmaneuh/)
-* [Medium](https://medium.com/@olmaneuh)
-* [YouTube](https://www.youtube.com/channel/UCd15EHZwrwWub_8V2fXqOjg)
+Olman Ureña
 
 
 
 ## License
-This project is licensed under the Apache License v2.0 - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License v2.0 - see the [LICENSE](LICENSE) file for details
